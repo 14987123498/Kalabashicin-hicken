@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siberian Lux Chickens | Элитные инкубационные куры</title>
+    <meta name="description" content="Купить элитных цыплят и инкубационные яйца в Омске и с доставкой по России. Сибирские породы кур с крепким иммунитетом. Гарантия качества, быстрая доставка.">
+    <meta name="keywords" content="купить цыплят Омск, купить яйца Омск, инкубационные яйца, цыплята бройлеры, куры несушки, ферма Омск, сибирские куры, элитные цыплята, купить кур, продажа цыплят">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/chicken.png">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div>
+                    <h1>Siberian Lux Chickens</h1>
+                    <p>Элитные цыплята из Сибири</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#about"><i class="fas fa-info-circle"></i> О нас</a>
+                <a href="#order"><i class="fas fa-shopping-cart"></i> Заказать</a>
+                <a href="#contact"><i class="fas fa-address-book"></i> Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой-баннер -->
+    <section class="hero">
+        <div class="container">
+            <h2>Здоровые, крепкие, элитные</h2>
+            <p>Инкубационные куры отборных пород с сибирским характером. Гарантия здоровья и быстрая доставка по всей России.</p>
+            <a href="#order" class="btn-hero">
+                <i class="fas fa-shopping-basket"></i> Выбрать цыплят
+            </a>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Почему выбирают наших цыплят?</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Сибирский иммунитет</h3>
+                    <p>Адаптированы к суровому климату, обладают сильным иммунитетом и выносливостью.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Натуральное выращивание</h3>
+                    <p>Выращены в естественных условиях на экологически чистых фермах Сибири.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Премиум-качество</h3>
+                    <p>Строгий ветеринарный контроль, документы и гарантия здоровья каждого цыпленка.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок заказа -->
+    <section id="order" class="order">
+        <div class="container">
+            <h2><i class="fas fa-shopping-cart"></i> Заказ цыплят</h2>
+            <p class="order-subtitle">Выберите количество — мы свяжемся с вами в течение 1 часа для подтверждения заказа</p>
+
+            <div class="order-wrapper">
+                <!-- Счетчик -->
+                <div class="counter-card">
+                    <h3>Ваш заказ</h3>
+                    <div class="counter">
+                        <button id="decrement" class="counter-btn"><i class="fas fa-minus"></i></button>
+                        <span id="count" class="count-display">10</span>
+                        <button id="increment" class="counter-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <p class="counter-label">Количество голов (от 1 до 1000)</p>
+                    <div class="price-display">
+                        <strong>Стоимость:</strong> 
+                        <span id="price">1 700</span> руб.
+                        <div><small>(170 руб./голова)</small></div>
+                    </div>
+                </div>
+
+                <!-- Форма -->
+                <div class="form-card">
+                    <h3>Ваши контакты</h3>
+                    <form id="orderForm" action="#" method="POST">
+                        <input type="hidden" name="_subject" value="Новый заказ цыплят">
+                        <input type="hidden" name="count" id="countInput" value="10">
+                        
+                        <div class="input-group">
+                            <label for="name"><i class="fas fa-user"></i> Ваше имя *</label>
+                            <input type="text" id="name" name="name" placeholder="Например, Иван" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Телефон *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67"  
+                                   title="Формат: +7 (999) 123-45-67" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="comment"><i class="fas fa-comment"></i> Комментарий к заказу</label>
+                            <textarea id="comment" name="comment" rows="4" 
+                                      placeholder="Укажите породу, желаемые сроки доставки, дополнительные пожелания..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Отправить заявку
+                        </button>
+                        <div id="loading" class="loading" style="display:none;"></div>
+                        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2><i class="fas fa-address-book"></i> Контакты</h2>
+            <div class="contact-info">
+                <div class="contact-card highlight">
+                    <i class="fas fa-phone-volume"></i>
+                    <h3>Телефон для заказов</h3>
+                    <a href="tel:+79991234567" class="phone-link">+7 (999) 123-45-67</a>
+                    <p>Тимофей (менеджер по продажам)</p>
+                    <p class="work-hours">Ежедневно с 9:00 до 21:00</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email для связи</h3>
+                    <p style="font-size: 1.2rem; margin: 15px 0;">
+                        <a href="mailto:T.kalabashkin@mail.ru" style="color: var(--primary); text-decoration: none;">
+                            T.kalabashkin@mail.ru
+                        </a>
+                    </p>
+                    <p>Отвечаем в течение 2 часов</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Наша ферма</h3>
+                    <p>Сибирский край, экологически чистый район</p>
+                    <p style="margin-top: 15px; color: var(--secondary);">
+                        <i class="fas fa-truck"></i> Доставка по всей России
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="currentYear"></span> «Siberian Lux Chickens». Элитные инкубационные куры.</p>
+            <p>Тимофей Калабашкин Михайлович</p>
+            <p>ИНН: 1234567890 | ОГРН: 1234567890123</p>
+            <div class="social">
+                <a href="https://wa.me/79991234567" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://t.me/siberian_chickens" target="_blank" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://vk.com/siberian_chickens" target="_blank" title="ВКонтакте">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a href="mailto:T.kalabashkin@mail.ru" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно успеха -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <i class="fas fa-check-circle success-icon"></i>
+            <h2>Заявка отправлена успешно!</h2>
+            <p>Спасибо, <span id="clientName" style="color: var(--primary); font-weight: bold;"></span>!</p>
+            <p>Ваш заказ на <strong id="orderCount" style="color: var(--primary);">10</strong> цыплят принят в обработку.</p>
+            <p>Тимофей свяжется с вами по номеру <strong id="clientPhone" style="color: var(--primary);"></strong> в течение часа.</p>
+            <button class="btn-ok">Отлично!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
