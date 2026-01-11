@@ -174,7 +174,7 @@ orderForm.addEventListener('submit', async function(e) {
     showLoading();
     
     try {
-        const response = await fetch('/api/send_order', {
+        const response = await fetch('/send_order', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -270,4 +270,5 @@ if (!document.querySelector('#loading-styles')) {
         }
     `;
     document.head.appendChild(style);
+
 }
