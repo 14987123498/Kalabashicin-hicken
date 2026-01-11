@@ -174,7 +174,7 @@ orderForm.addEventListener('submit', async function(e) {
     showLoading();
     
     try {
-        const response = await fetch('/send_order', {
+        const response = await fetch('/send_order.js', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
