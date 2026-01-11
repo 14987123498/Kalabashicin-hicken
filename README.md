@@ -1,2 +1,0 @@
-# Kalabashicin-hicken
-Kalabashicin Сhicken
